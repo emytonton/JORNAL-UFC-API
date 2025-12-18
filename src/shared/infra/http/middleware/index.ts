@@ -1,0 +1,4 @@
+// Middlewares HTTP reutilizáveis
+
+export {};
+

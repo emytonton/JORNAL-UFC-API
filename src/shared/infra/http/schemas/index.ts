@@ -1,0 +1,4 @@
+// Schemas HTTP compartilhados
+
+export {};
+

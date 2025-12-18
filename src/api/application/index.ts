@@ -1,0 +1,4 @@
+// Camada de aplicação
+
+export {};
+

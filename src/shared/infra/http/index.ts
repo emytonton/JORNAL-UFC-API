@@ -1,0 +1,4 @@
+// Implementações HTTP compartilhadas
+
+export {};
+

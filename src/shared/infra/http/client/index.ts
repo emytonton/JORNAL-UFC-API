@@ -1,0 +1,4 @@
+// Cliente HTTP genérico
+
+export {};
+

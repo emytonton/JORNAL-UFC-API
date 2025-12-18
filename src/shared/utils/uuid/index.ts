@@ -1,0 +1,4 @@
+// Utilitários de UUID
+
+export {};
+

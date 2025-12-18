@@ -1,0 +1,4 @@
+// Módulo da API
+
+export {};
+

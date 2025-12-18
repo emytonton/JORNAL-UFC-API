@@ -1,0 +1,4 @@
+// Funções auxiliares HTTP
+
+export {};
+

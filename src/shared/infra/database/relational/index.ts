@@ -1,0 +1,4 @@
+// Implementações relacionais (PostgreSQL)
+
+export {};
+
