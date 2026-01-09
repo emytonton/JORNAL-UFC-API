@@ -1,4 +1,1 @@
-// Serviços de aplicação
-
-export {};
-
+export * from "./file-storage";

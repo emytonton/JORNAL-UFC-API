@@ -1,4 +1,1 @@
-// Middlewares customizados do Express
-
-export {};
-
+export * from "./auth-middleware";
