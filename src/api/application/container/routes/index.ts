@@ -12,10 +12,11 @@ import { CreateCommentController } from "../../use-cases/create-comment/create-c
 import { DeleteCommentController } from "../../use-cases/delete-comment/delete-comment-controller";
 import { authMiddleware } from "../middlewares/auth-middleware";
 import { Multer } from "../../../infraestructure/upload/multer-config";
-
+import { UpdateUserController } from "../../use-cases/update-user/update-user-controller";
 export function createRoutes(
   signUpUserController: SignUpUserController,
   signInUserController: SignInUserController,
+  updateUserController: UpdateUserController,
   createPostController: CreatePostController,
   listPostsController: ListPostsController,
   updatePostController: UpdatePostController,
@@ -29,7 +30,11 @@ export function createRoutes(
 
   router.use(
     "/auth",
-    createAuthRoutes(signUpUserController, signInUserController)
+    createAuthRoutes(
+      signUpUserController,
+      signInUserController,
+      updateUserController
+    )
   );
 
   // Configurar multer para upload de imagem (limite de 10MB)

@@ -13,6 +13,7 @@ import { AwsS3FileStorage } from "./api/infraestructure/file-storage-impl";
 import { UseCasesFactory } from "./api/application/container/factories/use-cases-factory";
 import { SignUpUserController } from "./api/application/use-cases/sign-up-user/sign-up-user-controller";
 import { SignInUserController } from "./api/application/use-cases/sign-in-user/sign-in-user-controller";
+import { UpdateUserController } from "./api/application/use-cases/update-user/update-user-controller";
 import { CreatePostController } from "./api/application/use-cases/create-post/create-post-controller";
 import { ListPostsController } from "./api/application/use-cases/list-posts/list-posts-controller";
 import { UpdatePostController } from "./api/application/use-cases/update-post/update-post-controller";
@@ -58,6 +59,9 @@ async function bootstrap(): Promise<void> {
   const signInUserController = new SignInUserController(
     useCasesFactory.createSignInUserUseCase()
   );
+  const updateUserController = new UpdateUserController(
+    useCasesFactory.createUpdateUserUseCase()
+  );
   const createPostController = new CreatePostController(
     useCasesFactory.createCreatePostUseCase()
   );
@@ -90,6 +94,7 @@ async function bootstrap(): Promise<void> {
     createRoutes(
       signUpUserController,
       signInUserController,
+      updateUserController,
       createPostController,
       listPostsController,
       updatePostController,

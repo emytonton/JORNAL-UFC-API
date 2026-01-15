@@ -4,6 +4,7 @@ import { LikeRepository } from "../../../domain/repository/LikeRepository";
 import { CommentRepository } from "../../../domain/repository/CommentRepository";
 import { SignUpUserUseCase } from "../../use-cases/sign-up-user/sign-up-user";
 import { SignInUserUseCase } from "../../use-cases/sign-in-user/sign-in-user";
+import { UpdateUserUseCase } from "../../use-cases/update-user/update-user";
 import { CreatePostUseCase } from "../../use-cases/create-post/create-post";
 import { ListPostsUseCase } from "../../use-cases/list-posts/list-posts";
 import { UpdatePostUseCase } from "../../use-cases/update-post/update-post";
@@ -30,6 +31,10 @@ export class UseCasesFactory {
 
   createSignInUserUseCase(): SignInUserUseCase {
     return new SignInUserUseCase(this.userRepository, this.jwtSecret);
+  }
+
+  createUpdateUserUseCase(): UpdateUserUseCase {
+    return new UpdateUserUseCase(this.userRepository);
   }
 
   createCreatePostUseCase(): CreatePostUseCase {
