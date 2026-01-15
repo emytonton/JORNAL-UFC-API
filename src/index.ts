@@ -106,6 +106,9 @@ async function bootstrap(): Promise<void> {
     )
   );
 
+  app.get("/", (req, res) => {
+    res.sendStatus(200);
+  });
   // Iniciar servidor
   app.listen(config.port, () => {
     logger.info(`Server is running on port ${config.port}`);
